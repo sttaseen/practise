@@ -4,4 +4,4 @@ I am sorry if this looks unprofessional but this is  my first time using github 
 
 ## Disclaimer
 
-This repository might contain very bad and inefficient code. The code, under no circumstances should be taken as an examplar. Taking this code seriously may cause diarrhoea, severe eye pain or even death. You have been cautioned.
+This repository might contain very bad and inefficient code. The code, under no circumstances should be taken as examplary. Taking this code seriously may cause diarrhoea, severe eye pain or even death. You have been cautioned.
