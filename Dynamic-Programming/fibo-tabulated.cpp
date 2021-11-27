@@ -7,8 +7,6 @@
 // instead, it tries to work out the i-th term by finding the previous 2 terms before i
 
 
-// time complexity: O(n); space complexity: O(1)
-
 unsigned long fib(int n){
     unsigned long value, last=1, buffer;
     for (int i = 1; i<=n; ++i){
