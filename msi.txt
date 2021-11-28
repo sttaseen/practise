@@ -1,5 +1,0 @@
-# Testing
-
-This is just a test from my windows pc to see if I am using git properly.
-
-## Pushing this code right now
