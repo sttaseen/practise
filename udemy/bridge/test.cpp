@@ -14,7 +14,7 @@ using namespace std;
 #define mii            map <int, int>
 #define mpi            map <pii, int>
 #define spi            set <pii>
-#define endl           \n
+#define endl           "\n"
 #define sz(x)          ((int) x.size())
 #define all(p)         p.begin(), p.end()
 #define double         long double
@@ -50,6 +50,9 @@ const int N = 200005;
 
 void solve() {
 	//bismillah
+	string name;
+	cin >> name;
+	cout << name;
 }
 
 int32_t main()

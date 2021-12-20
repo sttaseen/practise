@@ -1,0 +1,92 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+
+	"cpsimple": {
+		"prefix": "cpsimple",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"","using namespace std;",
+			"","#define int            long long int"
+			,"#define F              first",
+			"#define S              second",
+			"#define pb             push_back",
+			"#define si             set <int>",
+			"#define vi             vector <int>",
+			"#define pii            pair <int, int>",
+			"#define vpi            vector <pii>",
+			"#define vpp            vector <pair<int, pii>>",
+			"#define mii            map <int, int>",
+			"#define mpi            map <pii, int>",
+			"#define spi            set <pii>",
+			"#define endl           \"\\n\"",
+			"#define sz(x)          ((int) x.size())",
+			"#define all(p)         p.begin(), p.end()",
+			"#define double         long double",
+			"#define que_max        priority_queue <int>",
+			"#define que_min        priority_queue <int, vi, greater<int>>",
+			"#define bug(...)       __f (#__VA_ARGS__, __VA_ARGS__)",
+			"#define print(a)       for(auto x : a) cout << x << \" \"; cout << endl",
+			"#define print1(a)      for(auto x : a) cout << x.F << \" \" << x.S << endl",
+			"#define print2(a,x,y)  for(int i = x; i < y; i++) cout<< a[i]<< \" \"; cout << endl",
+			"",
+			"inline int power(int a, int b)",
+			"{",
+			"\tint x = 1;",
+			"\twhile (b)",
+			"\t{",
+			"\t\tif (b & 1) x *= a;",
+			"\t\ta *= a;",
+			"\t\tb >>= 1;",
+			"\t}",
+			"\treturn x;",
+			"}",
+			""
+			,"template <typename Arg1>",
+			"void __f (const char* name, Arg1&& arg1) { cout << name << \" : \" << arg1 << endl; }",
+			"template <typename Arg1, typename... Args>","void __f (const char* names, Arg1&& arg1, Args&&... args)",
+			"{",
+			"\tconst char* comma = strchr (names + 1, ',');",
+			"\tcout.write (names, comma - names) << \" : \" << arg1 << \" | \"; __f (comma + 1, args...);",
+			"}",
+			"",
+			"const int N = 200005;",
+			"",
+			"void solve() {",
+			"\t${1://bismillah}",
+			"}",
+			"",
+			"int32_t main()",
+			"{",
+			"\tios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);",
+			"",
+			"#ifndef ONLINE_JUDGE",
+			"\tfreopen(\"input.txt\",  \"r\",  stdin);",
+			"\tfreopen(\"output.txt\", \"w\", stdout);",
+			"#endif",
+			"",
+			"\tclock_t z = clock();",
+			"",
+			"\tint t = 1;",
+			"\t// cin >> t;",
+			"\twhile (t--) solve();",
+			"",
+			"\tcerr << \"Run Time : \" << ((double)(clock() - z) / CLOCKS_PER_SEC);",
+			"",
+			"\treturn 0;",
+			"}"],
+		"description": "Template for competitive programming"
+	}
+}
