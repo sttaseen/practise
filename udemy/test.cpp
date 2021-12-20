@@ -14,7 +14,7 @@ using namespace std;
 #define mii            map <int, int>
 #define mpi            map <pii, int>
 #define spi            set <pii>
-#define endl           "\n"
+#define endl           \n
 #define sz(x)          ((int) x.size())
 #define all(p)         p.begin(), p.end()
 #define double         long double
@@ -49,19 +49,7 @@ void __f (const char* names, Arg1&& arg1, Args&&... args)
 const int N = 200005;
 
 void solve() {
-	int n;
-	cin >> n;
-	int a[n];
-	for (int i = 0; i < 5; ++i)
-	{
-		cin >> a[i];
-	}
-	reverse(a, a+n);
-
-	for (int i = 0; i < n; ++i)
-	{
-		cout << a[i] << " ";
-	}
+	//bismillah
 }
 
 int32_t main()
