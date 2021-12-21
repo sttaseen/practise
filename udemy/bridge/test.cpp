@@ -50,7 +50,7 @@ const int N = 200005;
 
 void solve() {
 	//bismillah
-	string name;
+	std::string name;
 	cin >> name;
 	cout << name;
 }
