@@ -90,7 +90,7 @@ vi mergeSort(vi arr){
 
 
 void solve() {
-	vi a = {1,8,2,6,2,5,8,3,12,4,5,7,34,3,6,7,3,23};
+	vi a = {1,8,2,6,2,5,8,3};
 	vi c = mergeSort(a);
 	print(c);
 }
