@@ -48,51 +48,14 @@ void __f (const char* names, Arg1&& arg1, Args&&... args)
 
 const int N = 200005;
 
-vi merge(vi a, vi b){
-	vi c;
-	while (!(a.empty()) && !(b.empty())){
-		if (a.front()<b.front()){
-			c.push_back(a.front());
-			a.erase(a.begin());
-		} else if (b.front()<=a.front()){
-			c.push_back(b.front());
-			b.erase(b.begin());
-		}
-	}
-
-	while (!a.empty()){
-		c.push_back(a.front());
-		a.erase(a.begin());
-	}
-
-	while (!b.empty()){
-		c.push_back(b.front());
-		b.erase(b.begin());
-	}
-
-	return c;
+void test(const array<int,5> arr){
+	cout << arr[0];
 }
-
-vi mergeSort(vi arr){
-	if (arr.size()<=1){
-		return arr;
-	}
-
-	auto mid = arr.begin()+(arr.size()/2);
-
-	vi leftarr(arr.begin(), mid);
-	vi rightarr(mid, arr.end());
-
-	vi left = mergeSort(leftarr);
-	vi right = mergeSort(rightarr);
-	return merge(left, right);
-}
-
 
 void solve() {
-	vi a = {1,8,2,6,2,5,8,3,12,4,5,7,34,3,6,7,3,23};
-	vi c = mergeSort(a);
-	print(c);
+	array<int,5> arr = {1,2,3,4,5};
+	test(arr);
+	print(arr);
 }
 
 int32_t main()
