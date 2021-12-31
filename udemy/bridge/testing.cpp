@@ -27,14 +27,14 @@ using namespace std;
 
 inline int power(int a, int b)
 {
-	int x = 1;
-	while (b)
-	{
-		if (b & 1) x *= a;
-		a *= a;
-		b >>= 1;
-	}
-	return x;
+    int x = 1;
+    while (b)
+    {
+        if (b & 1) x *= a;
+        a *= a;
+        b >>= 1;
+    }
+    return x;
 }
 
 template <typename Arg1>
@@ -42,75 +42,32 @@ void __f (const char* name, Arg1&& arg1) { cout << name << " : " << arg1 << endl
 template <typename Arg1, typename... Args>
 void __f (const char* names, Arg1&& arg1, Args&&... args)
 {
-	const char* comma = strchr (names + 1, ',');
-	cout.write (names, comma - names) << " : " << arg1 << " | "; __f (comma + 1, args...);
+    const char* comma = strchr (names + 1, ',');
+    cout.write (names, comma - names) << " : " << arg1 << " | "; __f (comma + 1, args...);
 }
 
 const int N = 200005;
 
-vi merge(vi a, vi b){
-	vi c;
-	while (!(a.empty()) && !(b.empty())){
-		if (a.front()<b.front()){
-			c.push_back(a.front());
-			a.erase(a.begin());
-		} else if (b.front()<=a.front()){
-			c.push_back(b.front());
-			b.erase(b.begin());
-		}
-	}
-
-	while (!a.empty()){
-		c.push_back(a.front());
-		a.erase(a.begin());
-	}
-
-	while (!b.empty()){
-		c.push_back(b.front());
-		b.erase(b.begin());
-	}
-
-	return c;
-}
-
-vi mergeSort(vi arr){
-	if (arr.size()<=1){
-		return arr;
-	}
-
-	auto mid = arr.begin()+(arr.size()/2);
-
-	vi leftarr(arr.begin(), mid);
-	vi rightarr(mid, arr.end());
-
-	vi left = mergeSort(leftarr);
-	vi right = mergeSort(rightarr);
-	return merge(left, right);
-}
-
-
 void solve() {
-	vi a = {1,8,2,6,2,5,8,3,12,4,5,7,34,3,6,7,3,23};
-	vi c = mergeSort(a);
-	print(c);
+    //bismillah
 }
 
 int32_t main()
 {
-	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
 #ifndef ONLINE_JUDGE
-	freopen("input.txt",  "r",  stdin);
-	freopen("output.txt", "w", stdout);
+    freopen("input.txt",  "r",  stdin);
+    freopen("output.txt", "w", stdout);
 #endif
 
-	clock_t z = clock();
+    clock_t z = clock();
 
-	int t = 1;
-	// cin >> t;
-	while (t--) solve();
+    int t = 1;
+    // cin >> t;
+    while (t--) solve();
 
-	cerr << "Run Time : " << ((double)(clock() - z) / CLOCKS_PER_SEC);
+    cerr << "Run Time : " << ((double)(clock() - z) / CLOCKS_PER_SEC);
 
-	return 0;
+    return 0;
 }
