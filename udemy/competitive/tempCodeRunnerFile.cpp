@@ -1,2 +1,4 @@
-int n_size;
-    cin>> n_size;
+cout << "deck: ";
+        // print(deck);
+        // cout << "i: ";
+        // print(i);

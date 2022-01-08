@@ -48,19 +48,12 @@ void __f (const char* names, Arg1&& arg1, Args&&... args)
 
 const int N = 200005;
 
-<<<<<<< HEAD:udemy/bridge/testing.cpp
 void solve() {
-    //bismillah
-=======
-void test(const array<int,5> arr){
-	cout << arr[0];
-}
-
-void solve() {
-	array<int,5> arr = {1,2,3,4,5};
-	test(arr);
-	print(arr);
->>>>>>> b977e32a452e256629c2bbfd040bea7474b3116c:udemy/bridge/test.cpp
+	int x =1;
+    if (x==2)
+        cout << "hey";
+    else 
+        cout << "bye";
 }
 
 int32_t main()

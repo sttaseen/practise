@@ -31,6 +31,15 @@
         "type_traits": "cpp",
         "typeindex": "cpp",
         "utility": "cpp",
-        "valarray": "cpp"
-    }
+        "valarray": "cpp",
+        "*.tcc": "cpp",
+        "string": "cpp",
+        "forward_list": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "regex": "cpp",
+        "random": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }
