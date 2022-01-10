@@ -48,8 +48,33 @@ void __f (const char* names, Arg1&& arg1, Args&&... args)
 
 const int N = 200005;
 
+int decToBinary(int n)
+{
+    // Size of an integer is assumed to be 32 bits
+    for (int i = 31; i >= 0; i--) {
+        int k = n >> i;
+        if (k & 1)
+            cout << "1";
+        else
+            cout << "0";
+    }
+}
+
+int hammingDistance(int x, int y) {
+    int cnt=0;
+    int mask = 1;
+    for (int i=0; i<32; i++){
+        if((x&mask)^(y&mask)){
+            cnt++;
+        }
+        mask = mask<<1;
+    }
+    return cnt;
+}
+
+
 void solve() {
-	
+    cout << hammingDistance(1,4);
 }
 
 int32_t main()
