@@ -49,11 +49,7 @@ void __f (const char* names, Arg1&& arg1, Args&&... args)
 const int N = 200005;
 
 void solve() {
-	int x =1;
-    if (x==2)
-        cout << "hey";
-    else 
-        cout << "bye";
+	
 }
 
 int32_t main()
