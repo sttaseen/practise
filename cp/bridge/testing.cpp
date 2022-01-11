@@ -74,7 +74,8 @@ int hammingDistance(int x, int y) {
 
 
 void solve() {
-    cout << hammingDistance(1,4);
+    vector <int> x (3,1);
+    print(x);
 }
 
 int32_t main()
