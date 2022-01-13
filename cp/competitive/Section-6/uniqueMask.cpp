@@ -51,7 +51,6 @@ int uniqueThree(vector <int> arr){
 }
 
 int main(void){
-    cout << (4^9)<< endl;
     vector<int> arr {1,1,1,2,2,2,3};
     cout << uniqueThree(arr);
 }
