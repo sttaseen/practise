@@ -47,10 +47,107 @@ void __f (const char* names, Arg1&& arg1, Args&&... args)
 }
 
 const int N = 200005;
+const int sz = 2;
+const int mod = 1e9+7;
+
+struct Vec {
+    int v[sz];
+    Vec() {
+        memset(v, 0, sizeof(v));
+    }
+};
+
+
+struct Mat {
+    int m[sz][sz];
+    Mat() {
+        memset(m, 0, sizeof(m));
+    }
+
+    void ones() {
+        for (int i = 0; i < sz; i++)
+        {
+            for (int j = 0; j < sz; j++)
+            {
+                 m[i][j] = 1; 
+            }                         
+        }        
+    }
+
+    void identity() {
+        for (int i = 0; i < sz; i++)
+        {
+            m[i][i] = 1;                        
+        }        
+    }
+
+    Mat operator* (Mat& mat){
+        Mat res;
+        for (int i = 0; i < sz; i++)
+        {
+            for (int k = 0; k < sz; k++)
+            {
+                for (int j = 0; j < sz; j++)
+                {   
+                    res.m[i][k] += (m[i][j] * mat.m[j][k])%mod;
+                }
+                res.m[i][k]%=mod;            
+            }
+            
+        }
+        return res;        
+    }  
+    
+
+    Vec operator* (Vec& vec){
+        Vec res;
+        for (int i = 0; i < sz; i++)
+        {
+            for (int j = 0; j < sz; j++)
+            {
+                res.v[i] += (m[i][j] * vec.v[j])%mod;
+            }         
+            res.v[i] %= mod;
+        }  
+        
+        return res;  
+    }  
+};
+
+
+int fib(int n){
+    if (n<=2) return 1;
+    if(n==3) return 2;
+
+    n-=3;
+
+    Mat T;
+    T.ones();
+    T.m[1][1] = 0;
+
+    Vec x;
+    x.v[0] = x.v[1] = 1;
+
+    Mat Tf;
+    Tf.identity();
+
+    while(n){       
+        if(n&1) Tf=T*Tf;
+        T=T*T;      
+        n/=2;
+    }  
+
+    Vec res = Tf*x;
+
+    return res.v[0]+res.v[1];
+}
+
+int fibSum(int n, int m){
+    return (fib(m+2)-fib(n+1)+mod)%mod;
+}
 
 void solve() {
-    float x = 0.1 + 0.2;
-    cout << x;
+    cout << fibSum(1, 1e9);
 }
 
 int32_t main()

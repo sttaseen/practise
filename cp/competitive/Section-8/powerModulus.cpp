@@ -48,9 +48,18 @@ void __f (const char* names, Arg1&& arg1, Args&&... args)
 
 const int N = 200005;
 
+int modPow(int a, int n, int m){
+    int res=1;
+    while(n){
+        if (n&1) res=(res*a)%m;
+        a = (a*a)%m;
+        n/=2;
+    }
+    return res;
+}
+
 void solve() {
-    float x = 0.1 + 0.2;
-    cout << x;
+    cout << modPow(2,7,10);
 }
 
 int32_t main()
